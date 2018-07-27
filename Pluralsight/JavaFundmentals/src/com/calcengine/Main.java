@@ -26,5 +26,19 @@ public class Main {
         System.out.println("Overload result = ");
         System.out.println(equationOverload.getResult());
 
+        System.out.println();
+        System.out.println("Using Inheritance");
+        CalculateBase[] calculators = {
+                new Divider(100.0d, 50.0d),
+                new Adder(20.0d, 20.0d),
+                new Subracter(40.0d, 5.0d),
+                new Multiplier(5.0d, 4.0d)
+        };
+
+        for(CalculateBase calculator : calculators) {
+            calculator.calculate();
+            System.out.println(calculator.getResult());
+        }
+
     }
 }
